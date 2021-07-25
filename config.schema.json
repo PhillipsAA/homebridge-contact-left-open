@@ -1,15 +1,23 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
-  "pluginType": "platform",
-  "singular": true,
+  "pluginAlias": "ContactLeftOpenAccessory",
+  "pluginType": "accessory",
+  "singular": false,
   "schema": {
     "type": "object",
     "properties": {
       "name": {
-        "title": "Name",
+        "title": "Accessory Name",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "default": "Door Left Open",
+        "description": "The name for the accessory"
+      },
+      "timeout": {
+        "title": "Delay Time in seconds",
+        "description": "Amount of time in seconds to wait before triggering the left open notification.",
+        "type": "integer",
+        "default": 30,
+        "required": true
       }
     }
   }
