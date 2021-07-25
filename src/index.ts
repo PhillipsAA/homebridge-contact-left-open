@@ -25,7 +25,7 @@ class ContactLeftOpenAccessory implements AccessoryPlugin {
     this.log = log;
     this.api = api;
 
-    log.info('Loading', config.name, 'with a delay of', config.delay);
+    log.info('Loading', config.name, 'with a timeout of', config.timeout);
 
     this.switchService = this.createSwitch();
     this.contactService = this.createContactSensor();
@@ -34,7 +34,7 @@ class ContactLeftOpenAccessory implements AccessoryPlugin {
   }
 
   switchOnGet() {
-    this.log.info('Switch currently set to =>', this.getSwitchState());
+    this.log.debug('Switch currently set to =>', this.getSwitchState());
 
     return this.switchState;
   }
@@ -42,11 +42,11 @@ class ContactLeftOpenAccessory implements AccessoryPlugin {
   switchOnSet(value: CharacteristicValue) {
     this.switchState = value as number;
 
-    this.log.info('Switch set to =>', this.getSwitchState());
+    this.log.debug('Switch set to =>', this.getSwitchState());
 
     if (this.switchState) {
       this.timeoutId = setTimeout(() => {
-        this.log.info('Door left open for too long...');
+        this.log.debug('Door left open for too long...');
 
         this.setContactSensorState(true);
       }, this.config.timeout * 1000);
@@ -57,7 +57,7 @@ class ContactLeftOpenAccessory implements AccessoryPlugin {
   }
 
   setContactSensorState(value: boolean) {
-    this.log('Contact sensor open =>', value);
+    this.log.info('Contact sensor open =>', value);
 
     this.contactService.getCharacteristic(hap.Characteristic.ContactSensorState).updateValue(value);
   }
