@@ -40,7 +40,17 @@ class ContactLeftOpenAccessory implements AccessoryPlugin {
   }
 
   switchOnSet(value: CharacteristicValue) {
-    this.switchState = value as number;
+    this.log.debug('New State:', value);
+
+    if (value !== this.switchState) {
+      this.handleNewSwitchState(value as number);
+    } else {
+      this.log.debug('State has not changed, do nothing...');
+    }
+  }
+
+  handleNewSwitchState(value: number) {
+    this.switchState = value;
 
     this.log.debug('Switch set to =>', this.getSwitchState());
 
