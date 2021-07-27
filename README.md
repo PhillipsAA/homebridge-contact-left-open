@@ -36,5 +36,5 @@ If you do not use Homebridge UI or HOOBS then do the following:
 | --------------------------------  | -------------------------------------- |:--------:|:--------:|
 | `accessory`                       | always `"ContactLeftOpenAccessory"`    |     ✓    |  String  |
 | `name`                            | Name for your accessory                |     ✓    |  String  |
-| `timeout`                         |  Delay in seconds                      |     ✓    |  Integer |
+| `timeout`                         |  Timeout in seconds                      |     ✓    |  Integer |
 
