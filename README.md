@@ -17,7 +17,7 @@ The most common use of this plugin is to be notified when a contact sensor has b
 ## Installations
 
 If you do not use Homebridge UI or HOOBS then do the following:
-* ```sudo npm install -g homebridge-contact-left-open@1.0.2```
+* ```sudo npm install -g homebridge-contact-left-open@1.0.3```
 * Create an accessory in your config.json file
 * Restart homebridge
 
