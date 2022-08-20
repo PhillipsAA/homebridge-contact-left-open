@@ -17,7 +17,7 @@ The most common use of this plugin is to be notified when a contact sensor has b
 ## Installations
 
 If you do not use Homebridge UI or HOOBS then do the following:
-* ```sudo npm install -g homebridge-contact-left-open@1.0.3```
+* ```sudo npm install -g homebridge-contact-left-open@1.0.4```
 * Create an accessory in your config.json file
 * Restart homebridge
 
@@ -29,7 +29,7 @@ If you do not use Homebridge UI or HOOBS then do the following:
             "name": "Garage Door Left Open",
             "timeout": 300
         }
-    ]   
+    ]
 ```
 
 |             Parameter             |         Description                    | Required |   type   |
@@ -37,4 +37,3 @@ If you do not use Homebridge UI or HOOBS then do the following:
 | `accessory`                       | always `"ContactLeftOpenAccessory"`    |     ✓    |  String  |
 | `name`                            | Name for your accessory                |     ✓    |  String  |
 | `timeout`                         |  Timeout in seconds                      |     ✓    |  Integer |
-
