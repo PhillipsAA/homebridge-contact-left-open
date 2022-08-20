@@ -1,7 +1,7 @@
 {
   "displayName": "Contact Left Open",
   "name": "homebridge-contact-left-open",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Homebridge plugin to receive a notification when a contact sensor is left open for too long.",
   "license": "MIT",
   "repository": {
@@ -32,7 +32,7 @@
     "@typescript-eslint/parser": "^4.16.1",
     "eslint": "^7.21.0",
     "homebridge": "^1.3.1",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.19",
     "rimraf": "^3.0.2",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.2"
